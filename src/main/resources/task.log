@@ -1,0 +1,10 @@
+2020-02-25 19:54:12 INFO  Calculation:18 - Enter principal, Rate of interest and Time
+2020-02-25 19:54:35 INFO  Calculation:18 - Enter principal, Rate of interest and Time
+2020-02-25 19:54:44 INFO  App:20 - Simple Interest=7500.00, Compound Interest=9157.65
+2020-02-25 19:54:44 INFO  ConstructionCost:16 - Enter area:
+2020-02-25 19:54:54 INFO  ConstructionCost:19 - Type 'standard' to use STANDARD materials
+Type 'above' to use ABOVE standard materials
+Type 'high' to use HIGH standard material
+2020-02-25 19:55:02 INFO  ConstructionCost:23 - Do you want a fully automated house? (True/False)
+2020-02-25 19:55:06 INFO  App:26 - Choice of Material='high', Total Area Of House=250.0, Fully Automated Home=true, 
+Cost Of Construction=625000.0
