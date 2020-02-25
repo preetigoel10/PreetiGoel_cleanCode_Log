@@ -1,8 +1,11 @@
 package com.epam.HouseConstructionCost;
 
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ConstructionCost {
+    private static Logger LOGGER = LogManager.getLogger(ConstructionCost.class);
     private String materialChoice;
     private double totalAreaOfHouse;
     private boolean fullyAutomatedHome = false;
@@ -10,14 +13,14 @@ public class ConstructionCost {
 
     public void inputValues(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter area:");
+        LOGGER.info("Enter area:");
         totalAreaOfHouse = input.nextDouble();
 
-        System.out.println("Type 'standard' to use STANDARD materials\nType 'above' to use ABOVE standard materials\nType 'high' to use HIGH standard material");
+        LOGGER.info("Type 'standard' to use STANDARD materials\nType 'above' to use ABOVE standard materials\nType 'high' to use HIGH standard material");
         materialChoice= input.next().toLowerCase();
 
         if(materialChoice.contains("high")) {
-            System.out.println("Do you want a fully automated house? (True/False)");
+            LOGGER.info("Do you want a fully automated house? (True/False)");
             fullyAutomatedHome = input.nextBoolean();
         }
     }

@@ -2,17 +2,14 @@ package com.epam;
 
 import com.epam.HouseConstructionCost.ConstructionCost;
 import com.epam.SimpleInterestAndCompoundInterest.Calculation;
-
-import java.io.BufferedWriter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
+    private static Logger LOGGER = LogManager.getLogger(App.class);
+
     public static void main( String[] args )throws IOException
     {
         /*SIMPLE INTEREST AND COMPOUND INTEREST PROGRAM EXECUTION*/
@@ -20,13 +17,13 @@ public class App
         calculation.inputValues();
         calculation.calculateSimpleInterest();
         calculation.calculateCompoundInterest();
-        System.out.println(calculation);
+        LOGGER.info(calculation);
 
         /*COST OF HOUSE CONSTRUCTION PROGRAM EXECUTION*/
         ConstructionCost constructionCost = new ConstructionCost();
         constructionCost.inputValues();
         constructionCost.costCalculation();
-        System.out.println(constructionCost);
+        LOGGER.info(constructionCost);
 
     }
 }
